@@ -1,0 +1,15 @@
+D:\Back-End\Rambler\Cinema.Core\bin\Debug\netcoreapp3.1\Cinema.Core.deps.json
+D:\Back-End\Rambler\Cinema.Core\bin\Debug\netcoreapp3.1\Cinema.Core.dll
+D:\Back-End\Rambler\Cinema.Core\obj\Debug\netcoreapp3.1\Cinema.Core.csprojAssemblyReference.cache
+D:\Back-End\Rambler\Cinema.Core\obj\Debug\netcoreapp3.1\Cinema.Core.AssemblyInfoInputs.cache
+D:\Back-End\Rambler\Cinema.Core\obj\Debug\netcoreapp3.1\Cinema.Core.AssemblyInfo.cs
+D:\Back-End\Rambler\Cinema.Core\bin\Debug\netcoreapp3.1\Cinema.Data.dll
+D:\Back-End\Rambler\Cinema.Core\bin\Debug\netcoreapp3.1\Cinema.Core.runtimeconfig.json
+D:\Back-End\Rambler\Cinema.Core\bin\Debug\netcoreapp3.1\Cinema.Core.runtimeconfig.dev.json
+D:\Back-End\Rambler\Cinema.Core\bin\Debug\netcoreapp3.1\Cinema.Core.pdb
+D:\Back-End\Rambler\Cinema.Core\bin\Debug\netcoreapp3.1\Cinema.Data.pdb
+D:\Back-End\Rambler\Cinema.Core\obj\Debug\netcoreapp3.1\Cinema.Core.csproj.CopyComplete
+D:\Back-End\Rambler\Cinema.Core\obj\Debug\netcoreapp3.1\Cinema.Core.dll
+D:\Back-End\Rambler\Cinema.Core\obj\Debug\netcoreapp3.1\Cinema.Core.pdb
+D:\Back-End\Rambler\Cinema.Core\obj\Debug\netcoreapp3.1\Cinema.Core.genruntimeconfig.cache
+D:\Back-End\Rambler\Cinema.Core\obj\Debug\netcoreapp3.1\Cinema.Core.csproj.CoreCompileInputs.cache

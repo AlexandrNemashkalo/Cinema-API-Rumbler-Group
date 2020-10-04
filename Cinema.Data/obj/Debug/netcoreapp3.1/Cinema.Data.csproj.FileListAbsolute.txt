@@ -1,0 +1,9 @@
+D:\Back-End\Rambler\Cinema.Data\bin\Debug\netcoreapp3.1\Cinema.Data.deps.json
+D:\Back-End\Rambler\Cinema.Data\bin\Debug\netcoreapp3.1\Cinema.Data.dll
+D:\Back-End\Rambler\Cinema.Data\obj\Debug\netcoreapp3.1\Cinema.Data.csprojAssemblyReference.cache
+D:\Back-End\Rambler\Cinema.Data\obj\Debug\netcoreapp3.1\Cinema.Data.AssemblyInfoInputs.cache
+D:\Back-End\Rambler\Cinema.Data\obj\Debug\netcoreapp3.1\Cinema.Data.AssemblyInfo.cs
+D:\Back-End\Rambler\Cinema.Data\bin\Debug\netcoreapp3.1\Cinema.Data.pdb
+D:\Back-End\Rambler\Cinema.Data\obj\Debug\netcoreapp3.1\Cinema.Data.dll
+D:\Back-End\Rambler\Cinema.Data\obj\Debug\netcoreapp3.1\Cinema.Data.pdb
+D:\Back-End\Rambler\Cinema.Data\obj\Debug\netcoreapp3.1\Cinema.Data.csproj.CoreCompileInputs.cache

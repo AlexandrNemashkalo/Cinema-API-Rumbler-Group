@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cinema.API</name>
+    </assembly>
+    <members>
+        <member name="M:Cinema.API.Controllers.AuthController.Login(Cinema.API.ViewModels.LoginViewModel)">
+            <summary>
+            Аунтефикация пользователя
+            </summary>
+            <param name="model"></param>
+            <returns>токен или ошибку</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.AuthController.Register(Cinema.API.ViewModels.RegisterViewModel)">
+            <summary>
+            Регистрация 
+            </summary>
+            <param name="model"></param>
+            <returns>токен или ошибка</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.BookingController.GetAll">
+            <summary>
+            Получить все заказы
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.BookingController.GetBookingsByUser(System.Guid)">
+            <summary>
+            Получить все заказы определенного пользователя
+            </summary>
+            <param name="userId"></param>
+            <returns>список заказов</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.BookingController.GetById(System.Guid)">
+            <summary>
+            Получить заказ по его Id
+            </summary>
+            <param name="id"></param>
+            <returns>заказ</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.BookingController.Create(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Создать заказ
+            </summary>
+            <param name="seatsId"> В параметры передается список ID Мест </param>
+            <returns>созданный заказ или null(это значит что что-то пошло не так)</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.BookingController.Delete(System.Guid)">
+            <summary>
+            Отменить заказ
+            </summary>
+            <param name="id"> Id заказа</param>
+            <returns>true или false</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.BookingController.Pay(System.Guid)">
+            <summary>
+            Оплатить заказ
+            </summary>
+            <param name="id">Id уже оплаченного заказа</param>
+            <returns>true или false</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.HallController.GetAll">
+            <summary>
+            Получить все Помещения
+            </summary>
+            <returns>Список залов</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.HallController.GetById(System.Int32)">
+            <summary>
+            Получить помещение по его Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.HallController.Create(Cinema.Data.Entities.Hall)">
+            <summary>
+            Добавить новое помещение
+            </summary>
+            <param name="hall"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.HallController.Delete(System.Int32)">
+            <summary>
+            Удалить помещение
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.HallController.Update(Cinema.Data.Entities.Hall)">
+            <summary>
+            Обновить помещение
+            </summary>
+            <param name="hall">обьект помещения </param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.MovieController.GetAll">
+            <summary>
+            Получить список всех фильмов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.MovieController.GetById(System.Guid)">
+            <summary>
+            Поличть фильм по Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.MovieController.Create(Cinema.Data.Entities.Movie)">
+            <summary>
+            Добавить новый фильм
+            </summary>
+            <param name="mov"></param>
+            <returns>созданный фильм</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.MovieController.Delete(System.Guid)">
+            <summary>
+            Удалить Фильм 
+            </summary>
+            <param name="id"></param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.MovieController.Update(Cinema.Data.Entities.Movie)">
+            <summary>
+            Обновить информацию о фильме
+            </summary>
+            <param name="mov"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.SeatController.GeSeatsBySession(System.Guid)">
+            <summary>
+            Получить список всех мест для определенного сеанса
+            </summary>
+            <param name="sessionId">id сеанса</param>
+            <returns>список мест</returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.SessionController.GetAll">
+            <summary>
+            Получить все сеансы
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.SessionController.GetById(System.Guid)">
+            <summary>
+            Получить сеанс по его Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.SessionController.Create(Cinema.Data.Entities.Session)">
+            <summary>
+            Создать сеанс
+            </summary>
+            <param name="ses"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.SessionController.Delete(System.Guid)">
+            <summary>
+            Удалить сеанс
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.SessionController.Update(Cinema.Data.Entities.Session)">
+            <summary>
+            Обновить сеанс
+            </summary>
+            <param name="ses"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.UserController.GetAll">
+            <summary>
+            Получить список всех пользователей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.UserController.GetById(System.Guid)">
+            <summary>
+            Найти пользователя по его Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.UserController.GetByEmail(System.String)">
+            <summary>
+            Найти пользователя по его Email
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.UserController.Delete(System.Guid)">
+            <summary>
+            Удалить пользователя
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cinema.API.Controllers.UserController.Update(Cinema.Data.Dto.UserDto)">
+            <summary>
+            Обновить данные о пользователе
+            </summary>
+            <param name="us"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
