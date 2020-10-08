@@ -11,6 +11,8 @@ namespace Cinema.Data.Entities
         public DateTime DateOfChange { get; set; } = DateTime.Now;
         public User User { get; set; }
         public Guid UserId { get; set; }
-        public string Status { get; set; } = "создан"; // создан || удален || оплачен
+        public StatusBooking Status { get; set; }
+        public int StatusId { get; set; } = 1;
+        //public string Status { get; set; } = "создан"; // создан || удален || оплачен
     }
 }

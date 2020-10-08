@@ -17,7 +17,9 @@ namespace Cinema.Core.EF
         public DbSet<Session> Sessions { get; set; }
         public DbSet<Seat> Seats { get; set; }
         public DbSet<Booking> Bookings { get; set; }
-      
+        public DbSet<StatusBooking> StatusBookings { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
 
@@ -102,7 +104,24 @@ namespace Cinema.Core.EF
             }
             builder.Entity<Seat>().HasData(seats);
 
-
+            List<StatusBooking> statusBookings = new List<StatusBooking>() {
+                new StatusBooking
+                {
+                    Id = 1,
+                    Name ="создан"    
+                },
+                new StatusBooking
+                {
+                    Id = 2,
+                    Name ="оплачен"
+                },
+                new StatusBooking
+                {
+                    Id = 3,
+                    Name ="удален"
+                }
+            };
+            builder.Entity<StatusBooking>().HasData(statusBookings);
 
 
             base.OnModelCreating(builder);

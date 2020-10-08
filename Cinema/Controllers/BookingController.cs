@@ -27,6 +27,7 @@ namespace Cinema.API.Controllers
         {
             try
             {
+                
                 return Ok(await _repo.GetAllAsync());
             }
             catch (Exception e)
@@ -44,7 +45,6 @@ namespace Cinema.API.Controllers
         [HttpGet("userid/{id}")]
         public async Task<IActionResult> GetBookingsByUser(Guid userId)
         {
-
             try
             {
                 return Ok(await _repo.GetBookingsByUserAsync(userId));
@@ -84,14 +84,16 @@ namespace Cinema.API.Controllers
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] List<Guid> seatsId)
-        {
-          
+        {    
             var email = HttpContext.User.Identities.First()?.Name;            
             try
             {
-                return Ok(await _repo.CreateAsync(seatsId, email));
-               
-         
+                var result = await _repo.CreateAsync(seatsId, email);
+                if(result == null)
+                {
+                    return BadRequest("как минимум одно место уже занято");
+                }
+                return Ok(result);
             }
             catch (Exception e)
             {
@@ -111,7 +113,12 @@ namespace Cinema.API.Controllers
             var email = HttpContext.User.Identities.First()?.Name;
             try
             {
-                return Ok(await _repo.DeleteAsync(id, email));
+                var result = await _repo.DeleteAsync(id, email);
+                if (result)
+                {
+                    return Accepted(result);   
+                }
+                return BadRequest("не получилось отменить заказ");
             }
             catch (Exception e)
             {

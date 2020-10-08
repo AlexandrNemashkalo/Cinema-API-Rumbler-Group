@@ -13,7 +13,9 @@ namespace Cinema.Data.Dto
         public string UserName { get; set; }
         public string UserEmail { get; set; }
         public Guid UserId { get; set; }
-        public string Status { get; set; } = "создан"; // создан || удален || оплачен
+        public int StatusId { get; set; } = 1;
+        public string StatusName { get; set; }
+        //public string Status { get; set; } = "создан"; // создан || удален || оплачен
         public int SumMoney { get; set; }
     }
 

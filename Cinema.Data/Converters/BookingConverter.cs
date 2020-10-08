@@ -20,7 +20,8 @@ namespace Cinema.Data.Converters
                 UserEmail = booking.User?.Email,
                 UserId = booking.User.Id,
                 UserName = booking.User?.Name,
-                Status = booking.Status,
+                StatusId = booking.StatusId,
+                StatusName = booking.Status.Name,
                 SumMoney = booking.Seats.Sum(x => x.Session.Price),
 
             };
@@ -35,7 +36,7 @@ namespace Cinema.Data.Converters
                 Seats = SeatConverter.Convert(booking.Seats),
                 DateOfChange = booking.DateOfChange,
                 UserId = booking.UserId,
-                Status = booking.Status,
+                StatusId = booking.StatusId,
             };
         }
 

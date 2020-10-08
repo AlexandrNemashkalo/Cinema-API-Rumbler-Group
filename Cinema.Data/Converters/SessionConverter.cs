@@ -17,19 +17,15 @@ namespace Cinema.Data.Converters
                 Id = ses.Id,
                 Price =  ses.Price,
                 DateTime = ses.DateTime, 
-                Movie = new MovieForSessionDto 
-                {
-                    Id = ses.Movie.Id,
-                    Title = ses.Movie.Title,
-                    DurationMinutes = ses.Movie.DurationMinutes
-                },
-                Hall = new HallForSessionDto
-                {
-                    Id = ses.Hall.Id,
-                    Title = ses.Hall.Title,
-                    ColAllSeats = ses.Hall.RowMax * ses.Hall.ColumnMax
-                },
 
+                MovieId = ses.Movie.Id,
+                MovieTitle = ses.Movie.Title,
+                DurationMinutes = ses.Movie.DurationMinutes,
+
+                HallId = ses.Hall.Id,
+                HallTitle = ses.Hall.Title,
+                ColAllSeats = ses.Hall.RowMax * ses.Hall.ColumnMax,
+                
                 ColFreeSeats = ses.Seats.Where(x => x.BookingId == null).Count()
 
             };
@@ -43,8 +39,8 @@ namespace Cinema.Data.Converters
                 Id = ses.Id,
                 Price = ses.Price,
                 DateTime = ses.DateTime,
-                MovieId = ses.Movie.Id,
-                HallId = ses.Hall.Id,
+                MovieId = ses.MovieId,
+                HallId = ses.HallId,
             };
         }
 

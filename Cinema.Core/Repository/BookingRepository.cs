@@ -31,7 +31,8 @@ namespace Cinema.Core.Repository
         public async Task<List<BookingDto>> GetAllAsync()
         {
             List<Booking> bookings = await _context.Bookings
-                 .Include(x => x.User)
+                .Include(x => x.User)
+                .Include(x => x.Status)
                 .Include(x => x.Seats).ThenInclude(y => y.Session).ThenInclude(x => x.Movie)
                 .Include(x => x.Seats).ThenInclude(y => y.Session).ThenInclude(x => x.Hall)
                 .ToListAsync();
@@ -43,6 +44,7 @@ namespace Cinema.Core.Repository
         {
             List<Booking> booking = await _context.Bookings
                 .Include(x => x.User)
+                .Include(x => x.Status)
                 .Include(x => x.Seats).ThenInclude(y => y.Session).ThenInclude(x => x.Movie)
                 .Include(x => x.Seats).ThenInclude(y => y.Session).ThenInclude(x => x.Hall)
                 .Where(x => x.UserId == userId).ToListAsync();
@@ -56,6 +58,7 @@ namespace Cinema.Core.Repository
         {
             Booking booking = await _context.Bookings
                 .Include(x => x.User)
+                .Include(x => x.Status)
                 .Include(x => x.Seats).ThenInclude(y => y.Session).ThenInclude(x => x.Movie)
                 .Include(x =>x.Seats).ThenInclude(y => y.Session).ThenInclude(x => x.Hall)
                 .FirstOrDefaultAsync(x => x.Id == id);
@@ -68,37 +71,50 @@ namespace Cinema.Core.Repository
         public async Task<BookingDto> CreateAsync(List<Guid> seatsId, string email)
         {
 
-            User user = await _um.FindByNameAsync(email);
-            if (user != null)
-            {
-                Booking booking = new Booking
-                {
-                    Status = "создан",
-                    User = user,
-                    DateOfChange = DateTime.Now
-                };
-                var result = await _context.Bookings.AddAsync(booking);
-                await _context.SaveChangesAsync();
-
+                User user = await _um.FindByNameAsync(email);
+           // if (user != null)
+           // {
+                List<Seat> seats = new List<Seat>();
                 foreach (var seatId in seatsId)
                 {
                     var S = await _context.Seats.FirstOrDefaultAsync(x => x.Id == seatId);
                     if (S == null || S.BookingId != null)
                     {
-                        _context.Bookings.Remove(result.Entity);
-                        await _context.SaveChangesAsync();
-                        return null;
+                        seats.Clear();
+                        break;
                     }
-                    S.Booking = booking;
-                    S.BookingId = result.Entity.Id;
-                    _context.Seats.Update(S);
+                    seats.Add(S);
                 }
-                await _context.SaveChangesAsync();
 
-                return await GetByIdAsync(result.Entity.Id);
-            }
-            else
-                return null;
+                if (seats.Count > 0)
+                {
+                    Booking booking = new Booking
+                    {
+                        StatusId = 1, //1 == создан
+                        User = user,
+                        DateOfChange = DateTime.Now
+                    };
+                    var result = await _context.Bookings.AddAsync(booking);
+                    await _context.SaveChangesAsync();
+
+
+                    foreach (var seat in seats)
+                    {
+                        seat.Booking = booking;
+                        seat.BookingId = result.Entity.Id;
+                        _context.Seats.Update(seat);
+                    }
+                    await _context.SaveChangesAsync();
+
+                    return await GetByIdAsync(result.Entity.Id);
+
+                }
+                else
+                {
+                    return null; // как минимум одно седенье либо уже занято либо не существует
+                }
+           // }
+           // return null; // пользователя не существует 
         }
        
         
@@ -117,7 +133,7 @@ namespace Cinema.Core.Repository
                     _context.Seats.Update(seat);
                 }
 
-                booking.Status = "удален";
+                booking.StatusId = 3;
                 booking.DateOfChange = DateTime.Now;
                 _context.Bookings.Update(booking);
                 await _context.SaveChangesAsync();
@@ -134,7 +150,7 @@ namespace Cinema.Core.Repository
             Booking booking = await _context.Bookings.FirstOrDefaultAsync(e => e.Id == id);
             if (booking != null)
             {
-                booking.Status = "оплачен";
+                booking.StatusId = 2;
                 booking.DateOfChange = DateTime.Now;
                 _context.Bookings.Update(booking);
                 await _context.SaveChangesAsync();
