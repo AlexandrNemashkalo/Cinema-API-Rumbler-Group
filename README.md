@@ -4,4 +4,4 @@
 
 ## API
 
-![swagger](https://github.com/AlexandrNemashkalo/Cinema-API-Rumbler-Group/blob/structure/screens/swagger.png)
+![swagger](https://github.com/AlexandrNemashkalo/Cinema-API-Rumbler-Group/blob/main/screens/swagger.png)
