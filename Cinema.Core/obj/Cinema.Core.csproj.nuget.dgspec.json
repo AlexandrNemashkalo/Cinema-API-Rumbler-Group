@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Back-End\\Rambler\\Cinema.Core\\Cinema.Core.csproj": {}
+    "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Core\\Cinema.Core.csproj": {}
   },
   "projects": {
-    "D:\\Back-End\\Rambler\\Cinema.Core\\Cinema.Core.csproj": {
+    "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Core\\Cinema.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Back-End\\Rambler\\Cinema.Core\\Cinema.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Core\\Cinema.Core.csproj",
         "projectName": "Cinema.Core",
-        "projectPath": "D:\\Back-End\\Rambler\\Cinema.Core\\Cinema.Core.csproj",
+        "projectPath": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Core\\Cinema.Core.csproj",
         "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "D:\\Back-End\\Rambler\\Cinema.Core\\obj\\",
+        "outputPath": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Back-End\\Rambler\\Cinema.Data\\Cinema.Data.csproj": {
-                "projectPath": "D:\\Back-End\\Rambler\\Cinema.Data\\Cinema.Data.csproj"
+              "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Data\\Cinema.Data.csproj": {
+                "projectPath": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Data\\Cinema.Data.csproj"
               }
             }
           }
@@ -95,14 +95,14 @@
         }
       }
     },
-    "D:\\Back-End\\Rambler\\Cinema.Data\\Cinema.Data.csproj": {
+    "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Data\\Cinema.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Back-End\\Rambler\\Cinema.Data\\Cinema.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Data\\Cinema.Data.csproj",
         "projectName": "Cinema.Data",
-        "projectPath": "D:\\Back-End\\Rambler\\Cinema.Data\\Cinema.Data.csproj",
+        "projectPath": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Data\\Cinema.Data.csproj",
         "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "D:\\Back-End\\Rambler\\Cinema.Data\\obj\\",
+        "outputPath": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",

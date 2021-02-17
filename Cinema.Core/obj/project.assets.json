@@ -6244,11 +6244,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Back-End\\Rambler\\Cinema.Core\\Cinema.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Core\\Cinema.Core.csproj",
       "projectName": "Cinema.Core",
-      "projectPath": "D:\\Back-End\\Rambler\\Cinema.Core\\Cinema.Core.csproj",
+      "projectPath": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Core\\Cinema.Core.csproj",
       "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-      "outputPath": "D:\\Back-End\\Rambler\\Cinema.Core\\obj\\",
+      "outputPath": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6264,8 +6264,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Back-End\\Rambler\\Cinema.Data\\Cinema.Data.csproj": {
-              "projectPath": "D:\\Back-End\\Rambler\\Cinema.Data\\Cinema.Data.csproj"
+            "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Data\\Cinema.Data.csproj": {
+              "projectPath": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema.Data\\Cinema.Data.csproj"
             }
           }
         }

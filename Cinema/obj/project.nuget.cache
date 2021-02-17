@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "27Yx3R85lLow8d/TdLSfC3jpwATvb35TJ83RrswJzE/wY/D86yop7ekoW6D39e7NKrL9Mk+3Ioq04Ti9758mEA==",
+  "dgSpecHash": "a/3ob50ZIFwb5xouT48yz9hPjKZXtAIz7YCIviXtGTbn91o7Z14c2253wqnOd/u2VpQ2e3jvMnjV5l9qvKiCug==",
   "success": true,
-  "projectFilePath": "D:\\Back-End\\Rambler\\Cinema\\Cinema.API.csproj",
+  "projectFilePath": "C:\\Users\\Alexander\\Desktop\\Cinema-API-Rambler-Group\\Cinema\\Cinema.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexander\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Alexander\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
